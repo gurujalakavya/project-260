@@ -1,0 +1,27 @@
+{
+  "version": 1,
+  "author": "Gautam Ahuja",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-esp32-devkit-v1", "id": "esp", "top": 170.06, "left": -127.17, "attrs": {} },
+    {
+      "type": "wokwi-membrane-keypad",
+      "id": "keypad1",
+      "top": -129.19,
+      "left": 2.18,
+      "attrs": {}
+    }
+  ],
+  "connections": [
+    [ "esp:TX0", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX0", "$serialMonitor:TX", "", [] ],
+    [ "esp:D19", "keypad1:R1", "black", [ "h0" ] ],
+    [ "esp:D18", "keypad1:R2", "#8f4814", [ "h0" ] ],
+    [ "esp:D5", "keypad1:R3", "red", [ "h0" ] ],
+    [ "esp:TX2", "keypad1:R4", "orange", [ "h0" ] ],
+    [ "esp:RX2", "keypad1:C1", "gold", [ "h0" ] ],
+    [ "esp:D4", "keypad1:C2", "green", [ "h0" ] ],
+    [ "esp:D2", "keypad1:C3", "blue", [ "h0" ] ],
+    [ "esp:D15", "keypad1:C4", "violet", [ "h0" ] ]
+  ]
+}
